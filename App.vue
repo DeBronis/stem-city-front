@@ -6,11 +6,14 @@
 import { StackNavigator } from "vue-native-router";
 import { DrawerNavigator } from "vue-native-router";
 import MainScreen from "./Main";
+import LogInScreen from "./LogIn";
 import SignUpScreen from "./SignUp";
+import { Font } from "expo";
 
 const Drawer = DrawerNavigator(
   {
-    Main: MainScreen
+    Main: MainScreen,
+    LogIn: LogInScreen
   },
   {
     initialRouteName: "Main"
