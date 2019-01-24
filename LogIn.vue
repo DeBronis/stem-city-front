@@ -1,8 +1,9 @@
 <template>
   <view class="container">
-      <image class="background"
-      :style="{width: 200, height: 100}"
-      :source="{uri: 'https://i.ibb.co/LtgPmYz/Screen-Shot-2019-01-23-at-12-58-53-PM.png'}"
+    <image-background :source="login" class="login">
+      <image class="logo"
+      :style="{width: 400, height: 200, alignContent: 'center'}"
+      :source="{uri: '/Users/debroniswarren/playground2/stem-city-front/assets/images/imageedit_1_2155572343.png'}"
     ></image>
     <text class="title">Log In</text>
     <view class="input-container">
@@ -13,6 +14,7 @@
   </view>
 </template>
 <script>
+import login from "/Users/debroniswarren/playground2/stem-city-front/assets/images/photo-1517009572053-93fb56dfef49.jpeg";
 export default {
   props: {
     navigation: {
@@ -26,6 +28,7 @@ export default {
       firstName: "",
       lastName: "",
       email: "",
+      login: login
       
     };
   }
@@ -33,7 +36,7 @@ export default {
 </script>
 <style>
 .container {
-  background-color: white;
+  
   align-items: center;
   justify-content: flex-start;
   flex: 1;
@@ -48,10 +51,14 @@ export default {
   
 }
 .input-container {
-    display: flex;
+    display:flex;
     align-content: center;
     justify-content: space-evenly;
-    height: 600;
+    height: 300;
     width: 300;
+}
+.login {
+  flex: 1;
+  width: 100%;
 }
 </style>

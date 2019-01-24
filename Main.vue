@@ -1,41 +1,31 @@
 <template>
   <view class="container">
-    <!-- <text class="text-color-primary">S.T.E.M. City</text> -->
-    <!-- <text>{{ myInput }}</text> -->
-    <image class="background"
-      :style="{width: 400, height: 300}"
-      :source="{uri: 'https://i.ibb.co/LtgPmYz/Screen-Shot-2019-01-23-at-12-58-53-PM.png'}"
+  <image-background :source="home" class="home">
+    <image :source="logo" class="logo"
     ></image>
+    <view class="container2">
+    <touchable-opacity class="button1" :on-press="handleLogIn"
+      :style="{padding: 10}">
+      
+      <text class="button-text">Log In</text>
+	    
 
-    <touchable-opacity 
-      :on-press="handleLogIn"
-      :style="{padding: 10}"
-      >
-      <text style="{ color: 'white'}">Log In</text>
     </touchable-opacity>
-    <touchable-opacity 
-      :on-press="handleSignUp"
-      :style="{padding: 10}"
-      >
-      <text style="{ color: 'white'}">Sign Up</text>
+    <touchable-opacity  class="button2" :on-press="handleSignUp"
+      :style="{padding: 10}">
+       <text class="button-text">Sign-Up</text>
+	    
+
     </touchable-opacity>
-    <!-- <button
-        :on-press="handleButton"
-        title="My Button"
-        color="#841584"
-        accessibility-label="Learn more about this purple button"
-    /> -->
-    <!-- <flat-list
-        :data="[{key: 'a'}, {key: 'b'}]"
-        :render-item="(item) => renderList(item)"
-    /> -->
-  
-  </view>
+    </view>
+    </view>
 </template>
 
 <script>
-// import React from 'react'
-// import {Text} from 'react-native'
+import React from 'react'
+import {Text} from 'react-native'
+import home from "/Users/debroniswarren/playground2/stem-city-front/assets/images/photo-1517009572053-93fb56dfef49.jpeg";
+import logo from "/Users/debroniswarren/playground2/stem-city-front/assets/images/imageedit_1_2155572343.png";
 export default {
     props: {
         navigation: {
@@ -45,7 +35,9 @@ export default {
   data() {
     return {
       message: "Hello, world!",
-      myInput: ""
+      myInput: "",
+      home: home,
+      logo: logo
     };
   },
   methods:{
@@ -64,19 +56,65 @@ export default {
 
 <style>
 .container {
-  background-color: white;
-  align-items: center;
-  justify-content: flex-start;
+  
+  /* align-items: center;
+  justify-content: flex-start; */
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
+}
+.container2 {
+  height: 250;
+  width: 150;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative; left: 30%; top: 20%;
 }
 .text-color-primary {
   color: blue;
   font-size: 20;
 }
-.background {
-    color: transparent;
-    align-items: center;
-  justify-content: flex-start;
+.logo {
+  width: 90%;
+  height: 27%;
+  position: relative; left: 5%; 
+  color: transparent;
+  
+}
+.home {
+  flex: 1;
+  width: 100%;
+}
+.button1 {
+  height: 100;
+  width: 150;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10;
+  border-width: 2;
+}
+.button2 {
+   height: 100;
+  width: 150;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10;
+  border-width: 2;
+  align-content: center;
+  
+}
+.button-text {
+  font-family: Courier;
+  font-size: 25;
+  color:black;
+  
 }
 
 </style>
