@@ -6,10 +6,7 @@
       :style="{width: 400, height: 300}"
       :source="{uri: 'https://i.ibb.co/LtgPmYz/Screen-Shot-2019-01-23-at-12-58-53-PM.png'}"
     ></image>
-    <!-- <text-input
-      :style="{height: 40, width: 350, borderColor: 'gray', borderWidth: 1}"
-      v-model="myInput"
-    /> -->
+
     <touchable-opacity 
       :on-press="handleLogIn"
       :style="{padding: 10}"

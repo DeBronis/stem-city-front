@@ -6,12 +6,12 @@
     ></image>
     <text class="title">Sign Up</text>
     <view class="input-container">
-      <text-input class="input" v-model="firstName" placeholder="First Name"/>
-      <text-input class="input" v-model="lastName" placeholder="Last Name"/>
-      <text-input class="input" v-model="email" placeholder="Email"/>
-      <text-input class="input" v-model="grade" placeholder="Grade"/>
-      <text-input class="input" v-model="subject" placeholder="Subject"/>
-      <text-input class="input" v-model="zipCode" placeholder="Zip Code"/>
+      <text-input class="input" auto-capitalize="none" v-model="firstName" placeholder="First Name"/>
+      <text-input class="input" auto-capitalize="none"  v-model="lastName" placeholder="Last Name"/>
+      <text-input class="input" auto-capitalize="none"  v-model="email" placeholder="Email"/>
+      <text-input class="input" auto-capitalize="none"  v-model="grade" placeholder="Grade"/>
+      <text-input class="input" auto-capitalize="none"  v-model="subject" placeholder="Subject"/>
+      <text-input class="input" auto-capitalize="none"  v-model="zipCode" placeholder="Zip Code"/>
     </view>
     <!-- <touchable-opacity class="button-2" :on-press="handleSubscribers">
       <text class="button-text">Signup</text>
@@ -66,11 +66,6 @@ export default {
     justify-content: space-evenly;
     height: 600;
     width: 300;
-}
-.title {
-    height: ;
-    width: ;
-    
 }
 </style>
 
