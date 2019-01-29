@@ -2,8 +2,8 @@
   <view class="container">
       <image-background :source="signup" class="signup">
       <image :source="logo" class="logo"></image>
-      <text class="title">Map View</text>
       <view>
+          <image :source="map" class="map"></image>
     <touchable-opacity  class="button2" :on-press="handleMap"
       :style="{padding: 10}">
        <text class="button-text">List View</text>
@@ -17,6 +17,9 @@
 import logo from "/Users/debroniswarren/playground2/stem-city-front/assets/images/imageedit_1_2155572343.png";
 
 import signup from "/Users/debroniswarren/playground2/stem-city-front/assets/images/photo-1501769214405-5e5ee5125a02.jpeg";
+
+import map from "/Users/debroniswarren/playground2/stem-city-front/assets/images/map.png";
+
 export default {
   props: {
     navigation: {
@@ -27,6 +30,7 @@ export default {
     return {
       signup: signup,
       logo: logo,
+      map: map
       
     };
   },
@@ -72,12 +76,17 @@ export default {
   position: relative; left: 5%; 
     
 }
+.map {
+  width: 90%;
+  height: 65%;
+  position: relative; left: 5%;  
+}
 .signup {
   flex: 1;
   width: 100%;
 }
 .button2 {
-   height: 75;
+  height: 55;
   width: 150;
   background-color: azure;
   display: flex;
@@ -87,7 +96,7 @@ export default {
   border-width: 2;
   align-content: center;
   opacity: .50;
-  position: relative; left: 30%; bottom: -630%;
+  position: relative; left: 30%; bottom: -10%;
 }
 .title {
   font-family: Courier;
