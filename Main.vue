@@ -46,10 +46,10 @@ export default {
     },
     handleLogIn() {
       this.navigation.navigate("LogIn"); 
+    },
+    handleMap() {
+      this.navigation.navigate("Map"); 
     }
-    // renderList: function(item) {
-    //     return (<Text>{item.item.key}</Text>)
-    // }
   }
 };
 </script>
@@ -81,7 +81,7 @@ export default {
   width: 90%;
   height: 27%;
   position: relative; left: 5%; 
-  color: transparent;
+  
   
 }
 .home {
@@ -91,30 +91,32 @@ export default {
 .button1 {
   height: 100;
   width: 150;
-  background-color: transparent;
+  background-color: azure;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10;
   border-width: 2;
+  opacity: .50;
+  
 }
 .button2 {
    height: 100;
   width: 150;
-  background-color: transparent;
+  background-color: azure;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10;
   border-width: 2;
   align-content: center;
+  opacity: .50;
   
 }
 .button-text {
   font-family: Courier;
   font-size: 25;
-  color:black;
-  
+  color:black; 
 }
 
 </style>

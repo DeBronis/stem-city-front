@@ -8,6 +8,8 @@ import { DrawerNavigator } from "vue-native-router";
 import MainScreen from "./Main";
 import LogInScreen from "./LogIn";
 import SignUpScreen from "./SignUp";
+import MapScreen from "./Map";
+// import ResourcesScreen from "./Resources";
 import { Font } from "expo";
 
 const Drawer = DrawerNavigator(
@@ -23,7 +25,8 @@ const AppNavigation = StackNavigator(
   {
     Drawer: Drawer,
     Main: MainScreen,
-    SignUp: SignUpScreen
+    SignUp: SignUpScreen,
+    Map: MapScreen
   },
   {
     initialRouteName: "Main"
@@ -33,3 +36,4 @@ export default {
   components: { AppNavigation }
 };
 </script>
+

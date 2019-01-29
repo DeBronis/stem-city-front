@@ -2,22 +2,17 @@
   <view class="container">
       <image-background :source="signup" class="signup">
       <image :source="logo" class="logo"></image>
-    <text class="title">Sign Up</text>
-    <view class="input-container">
-      <text-input class="input" auto-capitalize="none" v-model="firstName" placeholder="First Name"/>
-      <text-input class="input" auto-capitalize="none"  v-model="lastName" placeholder="Last Name"/>
-      <text-input class="input" auto-capitalize="none"  v-model="email" placeholder="Email"/>
-      <text-input class="input" auto-capitalize="none"  v-model="grade" placeholder="Grade"/>
-      <text-input class="input" auto-capitalize="none"  v-model="subject" placeholder="Subject"/>
-    </view>
-    <view>
-    <touchable-opacity  class="button2" :on-press="handleSignUp"
+      <text class="title">Map View</text>
+      <view>
+    <touchable-opacity  class="button2" :on-press="handleMap"
       :style="{padding: 10}">
-       <text class="button-text">Submit</text>
+       <text class="button-text">List View</text>
     </touchable-opacity>
     </view>
   </view>
+  
 </template>
+
 <script>
 import logo from "/Users/debroniswarren/playground2/stem-city-front/assets/images/imageedit_1_2155572343.png";
 
@@ -30,18 +25,13 @@ export default {
   },
   data() {
     return {
-      myInput: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      grade: "",
-      subject:"",
       signup: signup,
-      logo: logo
+      logo: logo,
+      
     };
   },
   methods:{
-    handleSignUp() {
+    handleMap() {
       this.navigation.navigate("Map"); 
     }
   }
@@ -57,7 +47,7 @@ export default {
   align-content: center;
 }
 .input {
-  height: 60;
+  height: 50;
   width: 300;
   border-radius: 10;
   border-color: black;
@@ -69,11 +59,11 @@ export default {
   
 }
 .input-container {
-  height: 315;
+  height: 250;
   width: 150;
   display: flex;
   justify-content: space-evenly;
-  position: relative; left: 15%; bottom: -3%;
+  position: relative; left: 15%; bottom: -8%;
   /* opacity: .50; */ 
 }
 .logo {
@@ -97,19 +87,12 @@ export default {
   border-width: 2;
   align-content: center;
   opacity: .50;
-  position: relative; left: 30%; bottom: -110%;
-}
-.button-text{
-  font-family: Courier;
-  font-size: 25;
-  color:black;
+  position: relative; left: 30%; bottom: -630%;
 }
 .title {
   font-family: Courier;
-  font-size: 30;
+  font-size: 25;
   color:black;
-  position: relative; left: 35%; top: -4%;
-
+  position: relative; left: 35%; top: -2%;
 }
 </style>
-
