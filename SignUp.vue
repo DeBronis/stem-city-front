@@ -7,8 +7,7 @@
       <text-input class="input" auto-capitalize="none" v-model="firstName" placeholder="First Name"/>
       <text-input class="input" auto-capitalize="none"  v-model="lastName" placeholder="Last Name"/>
       <text-input class="input" auto-capitalize="none"  v-model="email" placeholder="Email"/>
-      <text-input class="input" auto-capitalize="none"  v-model="grade" placeholder="Grade"/>
-      <text-input class="input" auto-capitalize="none"  v-model="subject" placeholder="Subject"/>
+      <text-input class="input" auto-capitalize="none"  v-model="password" placeholder="Password"/>
     </view>
     <view>
     <touchable-opacity  class="button2" :on-press="handleSignUp"
@@ -34,8 +33,7 @@ export default {
       firstName: "",
       lastName: "",
       email: "",
-      grade: "",
-      subject:"",
+      password: "",
       signup: signup,
       logo: logo
     };

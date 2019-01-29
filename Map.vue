@@ -3,6 +3,8 @@
       <image-background :source="signup" class="signup">
       <image :source="logo" class="logo"></image>
       <view>
+        <view class="input-container">
+      <text-input class="input" auto-capitalize="none" v-model="zipCode" placeholder="Zip Code"/>
           <image :source="map" class="map"></image>
     <touchable-opacity  class="button2" :on-press="handleMap"
       :style="{padding: 10}">
@@ -30,13 +32,14 @@ export default {
     return {
       signup: signup,
       logo: logo,
-      map: map
+      map: map,
+      zipCode:"19144"
       
     };
   },
   methods:{
     handleMap() {
-      this.navigation.navigate("Map"); 
+      this.navigation.navigate("Resources"); 
     }
   }
 };
@@ -67,7 +70,7 @@ export default {
   width: 150;
   display: flex;
   justify-content: space-evenly;
-  position: relative; left: 15%; bottom: -8%;
+  position: relative; left: 15%; top: 14%;
   /* opacity: .50; */ 
 }
 .logo {
@@ -77,9 +80,10 @@ export default {
     
 }
 .map {
-  width: 90%;
-  height: 65%;
-  position: relative; left: 5%;  
+  width: 240%;
+  height: 190%;
+  position: relative; top: 47%; right: 35; 
+  border-radius: 15;
 }
 .signup {
   flex: 1;
@@ -96,7 +100,7 @@ export default {
   border-width: 2;
   align-content: center;
   opacity: .50;
-  position: relative; left: 30%; bottom: -10%;
+  position: relative; left: 46%; bottom: -82%;
 }
 .title {
   font-family: Courier;

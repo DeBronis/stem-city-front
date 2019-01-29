@@ -9,7 +9,7 @@ import MainScreen from "./Main";
 import LogInScreen from "./LogIn";
 import SignUpScreen from "./SignUp";
 import MapScreen from "./Map";
-// import ResourcesScreen from "./Resources";
+import ResourcesScreen from "./Resources";
 import { Font } from "expo";
 
 const Drawer = DrawerNavigator(
@@ -26,7 +26,8 @@ const AppNavigation = StackNavigator(
     Drawer: Drawer,
     Main: MainScreen,
     SignUp: SignUpScreen,
-    Map: MapScreen
+    Map: MapScreen,
+    Resources: ResourcesScreen
   },
   {
     initialRouteName: "Main"

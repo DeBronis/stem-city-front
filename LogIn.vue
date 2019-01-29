@@ -4,8 +4,6 @@
       <image :source="logo" class="logo"></image>
     <text class="title">Log In</text>
     <view class="input-container">
-      <text-input class="input" auto-capitalize="none" v-model="firstName" placeholder="First Name"/>
-      <text-input class="input" auto-capitalize="none"  v-model="lastName" placeholder="Last Name"/>
       <text-input class="input" auto-capitalize="none"  v-model="email" placeholder="Email"/>
       <text-input class="input" auto-capitalize="none"  v-model="password" placeholder="Password"/>
     </view>
@@ -67,7 +65,7 @@ export default {
   
 }
 .input-container {
-  height: 250;
+  height: 150;
   width: 150;
   display: flex;
   justify-content: space-evenly;
